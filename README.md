@@ -1,2 +1,0 @@
-# edifyvr.github.io
-
