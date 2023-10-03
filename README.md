@@ -1,2 +1,2 @@
-# edifyvr.github.io
-
+# EdifyVR
+## Making learning interactive
