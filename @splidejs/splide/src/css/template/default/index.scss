@@ -1,0 +1,13 @@
+@use 'colors';
+
+$spinner-size: 20px !default;
+$spinner-border: 2px solid colors.$sub02 !default;
+
+@use 'objects/index' with (
+  $spinner-size: $spinner-size,
+  $spinner-border: $spinner-border,
+);
+
+@forward 'core/index';
+@forward 'objects/index';
+@forward 'modifiers/index';

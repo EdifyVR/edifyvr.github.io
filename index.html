@@ -7,6 +7,7 @@
     <link rel="icon" type="image/x-icon" href="./img/logoWithText.png">
     <link rel="stylesheet" href="bootstrap/bootstrap-icons/bootstrap.min.css">
     <link rel="stylesheet" href="bootstrap/bootstrap-icons/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="@splidejs/splide/dist/css/splide.min.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -35,6 +36,9 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#progress">Postup riešenia</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#photo">Fotogaléria</a>
                             </li>
                         </ul>
                     </div>
@@ -119,24 +123,52 @@
                                 <h3 class="c-timeline__title">Analýza existujúcich VR hier</h3>
                                 <p class="c-timeline__desc">Zistenie stavu existujúcich VR hier "Impérium kremíka", zhodnotenie tém a návrh vylepšenia aktuálneho stavu resp. vývoj novej hry</p>
                             </div>
-                            <time></time>
                         </li>
                         <li class="c-timeline__item">
                             <div class="c-timeline__content active">
                                 <h3 class="c-timeline__title">Zhodnotenie nápadov na riešenie</h3>
                                 <p class="c-timeline__desc">Zhodnotenie nazbieraných poznatkov a rozhodnutie, akým smerom pôjde ďalšie pokračovanie</p>
                             </div>
-                            <time></time>
                         </li>
                         <li class="c-timeline__item">
                             <div class="c-timeline__content">
                                 <h3 class="c-timeline__title">Nájdenie vhodných prostriedkov pre realizáciu riešenia</h3>
                                 <p class="c-timeline__desc"></p>
                             </div>
-                            <time></time>
                         </li>
                     </ol>
                 </div>
+            </div>
+
+            <div id="photo" class="b-example-divider"></div>
+
+            <div class="splide_carousel container-fluid py-4">
+                <div class="row justify-content-center pb-4"><h3 class="text-center">Fotogaléria</h3></div>
+                <div class="not_developed text-center w-100">Na obsahu sa pracuje</div>
+                <section class="splide" id="image-carousel" aria-label="Splide Basic HTML Example">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide">
+                                <img src="./img/blankPic.webp" alt="" >
+                            </li>
+                            <li class="splide__slide">
+                                <img src="./img/blankPic.webp" alt="" >
+                            </li>
+                            <li class="splide__slide">
+                                <img src="./img/blankPic.webp" alt="" >
+                            </li>
+                            <li class="splide__slide">
+                                <img src="./img/blankPic.webp" alt="">
+                            </li>
+                            <li class="splide__slide">
+                                <img src="./img/blankPic.webp" alt="" >
+                            </li>
+                            <li class="splide__slide">
+                                <img src="./img/blankPic.webp" alt="" >
+                            </li>
+                        </ul>
+                    </div>
+                </section>
             </div>
 
             <div class="b-example-divider"></div>
@@ -159,4 +191,25 @@
     </div>
 </body>
 <script src="bootstrap/bootstrap.bundle.min.js"></script>
+<script src="@splidejs/splide/dist/js/splide.min.js"></script>
+<script>
+    document.addEventListener( 'DOMContentLoaded', function() {
+        var elms = document.getElementsByClassName( 'splide' );
+
+        new Splide( '#image-carousel', {
+            perPage    : 3,
+            cover      : true,
+            heightRatio: 0.5,
+            type   : 'loop',
+            perMove: 1,
+            gap: '1em',
+            drag: 'free',
+            snap: true,
+            autoplay: true,
+            pauseOnHover: true,
+            pauseOnFocus: true,
+            interval: 3000
+        }  ).mount();
+    } );
+</script>
 </html>
