@@ -104,3 +104,8 @@ time {
     position: relative;
 }
 
+.splide__slide{
+    max-height: 80vh;
+    background-size: contain!important;
+}
+
