@@ -111,6 +111,7 @@ time {
 
 .profile_item:hover{
     background-color: rgba(0,0,0,0.1);
+    box-shadow: 10px 10px 8px #888888;
     cursor: grab;
 }
 
