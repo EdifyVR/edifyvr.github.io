@@ -203,28 +203,44 @@
                     <div class="splide__track">
                         <ul class="splide__list">
                             <li class="splide__slide">
-                                <img src="img/gallery/game1.png" alt="" >
+                                <a href="img/gallery/game1.png" class="image-anchor" data-toggle="lightbox" data-caption="">
+                                    <img src="img/gallery/game1.png" alt="" class="gallery-image">
+                                </a>
                             </li>
                             <li class="splide__slide">
-                                <img src="img/gallery/game2.png" alt="">
+                                <a href="img/gallery/game2.png" class="image-anchor" data-toggle="lightbox" data-caption="">
+                                    <img src="img/gallery/game2.png" alt="" class="gallery-image">
+                                </a>
                             </li>
                             <li class="splide__slide">
-                                <img src="img/gallery/game3.png" alt="" >
+                                <a href="img/gallery/game3.png" class="image-anchor" data-toggle="lightbox" data-caption="">
+                                    <img src="img/gallery/game3.png" alt="" class="gallery-image">
+                                </a>
                             </li>
                             <li class="splide__slide">
-                                <img src="img/gallery/IMG_5263.webp" alt="" >
+                                <a href="img/gallery/IMG_5263.webp" class="image-anchor" data-toggle="lightbox" data-caption="">
+                                    <img src="img/gallery/IMG_5263.webp" alt="" class="gallery-image">
+                                </a>
                             </li>
                             <li class="splide__slide">
-                                <img src="img/gallery/IMG_5264.webp" alt="" >
+                                <a href="img/gallery/IMG_5264.webp" class="image-anchor" data-toggle="lightbox" data-caption="">
+                                    <img src="img/gallery/IMG_5264.webp" alt="" class="gallery-image">
+                                </a>
                             </li>
                             <li class="splide__slide">
-                                <img src="img/gallery/IMG_5267.webp" alt="" >
+                                <a href="img/gallery/IMG_5267.webp" class="image-anchor" data-toggle="lightbox" data-caption="">
+                                    <img src="img/gallery/IMG_5267.webp" alt="" class="gallery-image">
+                                </a>
                             </li>
                             <li class="splide__slide">
-                                <img src="img/gallery/IMG_5310.webp" alt="">
+                                <a href="img/gallery/IMG_5310.webp" class="image-anchor" data-toggle="lightbox" data-caption="">
+                                    <img src="img/gallery/IMG_5310.webp" alt="" class="gallery-image">
+                                </a>
                             </li>
                             <li class="splide__slide">
-                                <img src="img/gallery/IMG_5312.webp" alt="" >
+                                <a href="img/gallery/IMG_5312.webp" class="image-anchor" data-toggle="lightbox" data-caption="">
+                                    <img src="img/gallery/IMG_5312.webp" alt="" class="gallery-image">
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -542,10 +558,16 @@
 </body>
 <script src="bootstrap/bootstrap.bundle.min.js"></script>
 <script src="@splidejs/splide/dist/js/splide.min.js"></script>
+<script src="js/index.bundle.min.js"></script>
+<script src="js/jquery-3.6.0.min.js"></script>
 <script>
+    anchors = $('.image-anchor');
+    images = $('.gallery-image');
+
     document.addEventListener( 'DOMContentLoaded', function() {
 
         var elms = document.getElementsByClassName( 'splide' );
+
 
         new Splide( '#image-carousel', {
             perPage    : 3,
@@ -557,7 +579,7 @@
             gap: '1em',
             drag: 'free',
             snap: true,
-            autoplay: true,
+            autoplay: false,
             pauseOnHover: true,
             pauseOnFocus: true,
             interval: 3000
@@ -565,6 +587,8 @@
 
         const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
         const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
     } );
+
 </script>
 </html>
